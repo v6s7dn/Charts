@@ -487,9 +487,13 @@ open class PieChartRenderer: DataRenderer
                         
                         if j < data.entryCount && pe?.label != nil
                         {
+                            var label = pe!.label!
+                            if pe!.value < 10.0 {
+                                label = ""
+                            }
                             ChartUtils.drawText(
                                 context: context,
-                                text: pe!.label!,
+                                text: label,
                                 point: CGPoint(x: x, y: y + lineHeight),
                                 align: .center,
                                 attributes: [
@@ -502,9 +506,13 @@ open class PieChartRenderer: DataRenderer
                     {
                         if j < data.entryCount && pe?.label != nil
                         {
+                            var label = pe!.label!
+                            if pe!.value < 10.0 {
+                                label = ""
+                            }
                             ChartUtils.drawText(
                                 context: context,
-                                text: pe!.label!,
+                                text: label,
                                 point: CGPoint(x: x, y: y + lineHeight / 2.0),
                                 align: .center,
                                 attributes: [
