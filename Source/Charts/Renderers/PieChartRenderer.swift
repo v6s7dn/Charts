@@ -488,6 +488,7 @@ open class PieChartRenderer: DataRenderer
                         if j < data.entryCount && pe?.label != nil
                         {
                             var label = pe!.label!
+                            //小于10不显示
                             if pe!.value < 10.0 {
                                 label = ""
                             }
@@ -507,6 +508,7 @@ open class PieChartRenderer: DataRenderer
                         if j < data.entryCount && pe?.label != nil
                         {
                             var label = pe!.label!
+                            //小于10不显示
                             if pe!.value < 10.0 {
                                 label = ""
                             }
